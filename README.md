@@ -1,4 +1,4 @@
-# KoalaOps / login-azure-aks
+# Skyhook / login-azure-aks
 
 Unified Azure login with optional **AKS kubecontext** and **ACR registry** login.
 
@@ -7,7 +7,7 @@ Unified Azure login with optional **AKS kubecontext** and **ACR registry** login
 - ☸️ Optional **AKS** kube context setup
 - 🐳 Optional **ACR** registry login
 
-> This action is designed to be used directly, or as a building block in `KoalaOps/cloud-login`.
+> This action is designed to be used directly, or as a building block in `skyhook-io/cloud-login`.
 
 ---
 
@@ -20,7 +20,7 @@ permissions:
   id-token: write
   contents: read
 
-- uses: KoalaOps/login-azure-aks@v1
+- uses: skyhook-io/login-azure-aks@v1
   with:
     subscription_id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
     resource_group: my-rg
@@ -35,7 +35,7 @@ permissions:
 ### 2) Service Principal (client secret) — registry only
 
 ```yaml
-- uses: KoalaOps/login-azure-aks@v1
+- uses: skyhook-io/login-azure-aks@v1
   with:
     subscription_id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
     client_id: ${{ secrets.AZURE_CLIENT_ID }}
@@ -48,7 +48,7 @@ permissions:
 ### 3) Managed Identity (self-hosted) + AKS
 
 ```yaml
-- uses: KoalaOps/login-azure-aks@v1
+- uses: skyhook-io/login-azure-aks@v1
   with:
     subscription_id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
     resource_group: my-rg
