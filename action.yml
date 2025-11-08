@@ -1,4 +1,4 @@
-name: KoalaOps / login-azure-aks
+name: 'Skyhook Login to Azure AKS'
 description: Login to Azure via SP (secret or OIDC) or Managed Identity, with optional AKS kubecontext and ACR login.
 author: KoalaOps
 branding:
