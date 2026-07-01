@@ -64,7 +64,7 @@ runs:
         fi
 
     - name: Azure login (Service Principal secret or OIDC) or Managed Identity
-      uses: azure/login@v2
+      uses: azure/login@v3
       with:
         subscription-id: ${{ inputs.subscription_id }}
         client-id: ${{ inputs.client_id }}
@@ -73,7 +73,7 @@ runs:
 
     - name: Set AKS kubecontext
       if: inputs.cluster_name != ''
-      uses: azure/aks-set-context@v4
+      uses: azure/aks-set-context@v5
       with:
         subscription-id: ${{ inputs.subscription_id }}
         resource-group: ${{ inputs.resource_group }}
